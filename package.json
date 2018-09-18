@@ -1,0 +1,27 @@
+{
+  "name": "puppeteer-pdf-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honmaaax/puppeteer-pdf-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/honmaaax/puppeteer-pdf-test/issues"
+  },
+  "homepage": "https://github.com/honmaaax/puppeteer-pdf-test#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "puppeteer": "^1.8.0",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  }
+}
