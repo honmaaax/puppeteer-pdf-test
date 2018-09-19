@@ -1,9 +1,10 @@
 import puppeteer from 'puppeteer'
+import os from 'os'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
-(async () => {
-  const browser = await puppeteer.launch()
+export async function handle(req, res) {
+  const browser = await puppeteer.launch({args: ['--no-sandbox']})
   const page = await browser.newPage()
   const data = {hoge: 'fuga'}
   const html = ReactDOMServer.renderToString(
@@ -24,6 +25,7 @@ import ReactDOMServer from 'react-dom/server'
     </html>
   )
   await page.goto(`data:text/html,${html}`, {waitUntil: 'networkidle0'})
-  await page.pdf({path: 'example.pdf'})
+  await page.pdf({path: `${os.tmpdir()}/example.pdf`})
   await browser.close()
-})()
+  await res.status(200).send('OK')
+}
