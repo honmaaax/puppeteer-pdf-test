@@ -19,6 +19,16 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(otf)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            mimetype: 'application/x-font-otf',
+            limit: 10*1000*1000, // 10MB
+          },
+        },
+      },
     ],
   },
   externals: [webpackNodeExternals()],

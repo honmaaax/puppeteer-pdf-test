@@ -14,6 +14,8 @@ package:
     - node_modules/**
     - .gitignore
     - .git/**
+  include:
+    - font.otf
 
 functions:
   puppeteerPdfTest:
@@ -25,5 +27,6 @@ custom:
   webpackIncludeModules: true
 
 plugins:
+  - serverless-offline
   - serverless-webpack
   - serverless-google-cloudfunctions

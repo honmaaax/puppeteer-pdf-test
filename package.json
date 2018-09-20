@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "sls deploy"
+    "deploy": "sls deploy",
+    "start": "serverless offline start"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/honmaaax/puppeteer-pdf-test#readme",
   "dependencies": {
+    "@google-cloud/storage": "^2.0.3",
+    "axios": "^0.18.0",
     "babel-register": "^6.26.0",
     "puppeteer": "^1.8.0",
     "react": "^16.5.1",
@@ -27,8 +30,11 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "serverless": "^1.32.0",
     "serverless-google-cloudfunctions": "^2.0.0",
+    "serverless-offline": "^3.25.12",
     "serverless-webpack": "^5.2.0",
+    "url-loader": "^1.1.1",
     "webpack": "^4.19.1",
     "webpack-node-externals": "^1.7.2"
   }
