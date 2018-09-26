@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const webpackNodeExternals = require('webpack-node-externals')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -32,4 +33,16 @@ module.exports = {
     ],
   },
   externals: [webpackNodeExternals()],
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: 'fonts/font.ttf',
+        to: 'fonts/font.ttf',
+      },
+      {
+        from: 'fonts/font.woff',
+        to: 'fonts/font.woff',
+      },
+    ])
+  ],
 }
